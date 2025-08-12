@@ -1,0 +1,106 @@
+/* ブラウザで設定されているスタイルのリセット・共通設定 */
+/* 消さないでください */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+form,
+input,
+textarea,
+select,
+button {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+/* スタイルのリセット終了 */
+
+/* サイドバーとメインコンテンツを包むための要素のスタイルを書いてください */
+.content {
+  display: flex;
+  height: 100vh; /* ビューポートの高さに合わせる */
+}
+
+/* サイドバーに関連するスタイルを書いてください */
+.sidebar {
+  width: 256px; /* サイドバーの幅 */
+  flex-shrink: 0; /* サイドバーが縮まないようにする */
+  background-color: #f5f5f5; /* サイドバーの背景色 */
+  border-right: 1px solid #e0e0e0; /* サイドバーの右側に境界線を追加 */
+  display: flex;
+  flex-direction: column; /* サイドバーの内容を縦に並べる */
+  height: 100%; /* サイドバーの高さをビューポートに合わせる */
+}
+
+.sidebar-header {
+  padding: 20px; /* ヘッダーのパディング */
+  border-bottom: 1px solid #e0e0e0; /* ヘッダーの下に境界線を追加 */
+}
+
+.sidebar-header a {
+  font-size: 1.25rem; /* フォントサイズ */
+  font-weight: 600; /* フォントの太さ */
+  color: #4f7cac; /* テキストの色 */
+  display: flex; /* アイコンとテキストを横に並べる */
+  align-items: center; /* アイコンとテキストを縦に中央揃え */
+  gap: 8px; /* アイコンとテキストの間にスペースを追加 */
+  text-decoration: none; /* リンクの下線を消す */
+}
+
+/* メインコンテンツに関連するスタイルを書いてください */
+main {
+  flex: 1; /* メインコンテンツが残りのスペースを占める */
+}
+
+.main-header {
+  background-color: white; /* メインヘッダーの背景色 */
+  padding: 32px; /* ヘッダーのパディング */
+  border-bottom: 1px solid #e0e0e0; /* ヘッダーの下に境界線を追加 */
+  text-align: center; /* ヘッダーのテキストを中央揃え */
+}
+
+.profile-icon {
+  width: 96px; /* アイコンの幅 */
+  height: 96px; /* アイコンの高さ */
+  background-color: #4f7cac; /* アイコンの背景色 */
+  border-radius: 50%; /* アイコンを丸くする */
+  display: flex; /* アイコンの内容を中央に配置 */
+  justify-content: center; /* アイコンの内容を中央に配置 */
+  align-items: center; /* アイコンの内容を中央に配置 */
+  margin: 0 auto 24px; /* アイコンの下にスペースを追加 */
+  font-size: 2.5rem; /* アイコンのフォントサイズ */
+  color: white; /* アイコンのテキスト色 */
+}
+
+.main-header h1 {
+  font-size: 1.5rem; /* ヘッダーのタイトルのフォントサイズ */
+  font-weight: 600; /* ヘッダーのタイトルのフォントの太さ */
+  color: #2f2f2f; /* ヘッダーのタイトルの色 */
+  margin-bottom: 8px; /* タイトルの下にスペースを追加 */
+}
+
+.main-header h2 {
+  font-size: 1.125rem; /* ヘッダーのサブタイトルのフォントサイズ */
+  color: #757575; /* ヘッダーのサブタイトルの色 */
+  margin-bottom: 24px; /* サブタイトルの下にスペースを追加 */
+}
+
+.main-message {
+  max-width: 672px; /* メッセージの最大幅 */
+  margin: 0 auto; /* メッセージを中央に配置 */
+  padding: 32px; /* メッセージのパディング */
+  color: #757575; /* メッセージのテキスト色 */
+  margin-bottom: 16px; /* メッセージの下にスペースを追加 */
+}
